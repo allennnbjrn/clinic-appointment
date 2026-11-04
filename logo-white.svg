@@ -21,8 +21,8 @@
   </g>
 
   <g transform="translate(132 28)">
-    <text x="0" y="34" font-family=""Segoe UI", "Helvetica Neue", Arial, sans-serif" font-size="38" font-weight="700" letter-spacing="-1.2" fill="#F8F6F0">BrightSmile</text>
+    <text x="0" y="34" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="38" font-weight="700" letter-spacing="-1.2" fill="#F8F6F0">BrightSmile</text>
     <rect x="0" y="48" width="178" height="4" rx="2" fill="url(#whiteGold)"/>
-    <text x="0" y="78" font-family=""Segoe UI", "Helvetica Neue", Arial, sans-serif" font-size="12.5" font-weight="700" letter-spacing="5.3" fill="#D9D0BF">DENTAL CARE</text>
+    <text x="0" y="78" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="700" letter-spacing="5.3" fill="#D9D0BF">DENTAL CARE</text>
   </g>
 </svg>
