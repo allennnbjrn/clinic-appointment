@@ -1,0 +1,250 @@
+<?php 
+require_once 'config.php';
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
+
+// Guests land on the login page first; the homepage is for signed-in users.
+if (!isset($_SESSION['user_id'])) {
+    header('Location: login.php');
+    exit;
+}
+
+$page_title = 'BrightSmile Dental | Appointment System';
+require 'header.php';
+?>
+
+<!-- Hero -->
+<section class="hero home-hero">
+    <div class="container home-hero-grid">
+        <div class="hero-copy">
+            <div class="eyebrow">Modern family dentistry</div>
+            <h1>Your smile deserves <span class="accent">confident care.</span></h1>
+            <p>Preventive care, cosmetic dentistry, and same-week appointments in a calm, welcoming clinic designed around your comfort.</p>
+
+            <div class="hero-buttons">
+                <a href="book.appointment.php" class="btn-primary">Book an Appointment</a>
+                <a href="services.php" class="btn-secondary">Explore Services</a>
+            </div>
+
+            <div class="hero-meta">
+                <span>✓ 4.9/5 patient rating</span>
+                <span>✓ New patients welcome</span>
+            </div>
+        </div>
+
+        <div class="hero-panel">
+            <div class="panel-top">
+                <span class="badge-soft">Next available</span>
+                <strong>Today • 3:30 PM</strong>
+            </div>
+
+            <div class="mini-card">
+                <div class="mini-label">Dental exam</div>
+                <div class="mini-price">$89</div>
+            </div>
+
+            <div class="mini-booking">
+                <div>
+                    <small>Smile Consultation</small>
+                    <strong>Dr. Sofia Alvarez</strong>
+                </div>
+                <a href="book.appointment.php" class="btn-small">Reserve</a>
+            </div>
+
+            <ul class="hero-points">
+                <li>Same-week visits</li>
+                <li>Digital x-rays</li>
+                <li>Comfort-first treatment</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<!-- Trust bar -->
+<section class="trust-bar">
+    <div class="container trust-grid">
+        <div class="stat-pill">
+            <strong>12k+</strong>
+            <span>Happy patients</span>
+        </div>
+        <div class="stat-pill">
+            <strong>18+</strong>
+            <span>Years of care</span>
+        </div>
+        <div class="stat-pill">
+            <strong>4.9</strong>
+            <span>Average rating</span>
+        </div>
+        <div class="stat-pill">
+            <strong>1 day</strong>
+            <span>Fast appointments</span>
+        </div>
+    </div>
+</section>
+
+<!-- Features -->
+<section class="features">
+    <div class="container">
+        <div class="section-header">
+            <span class="eyebrow dark">Why patients choose us</span>
+            <h2>Care that feels personal, modern, and reassuring.</h2>
+        </div>
+
+        <div class="grid-4">
+            <div class="feature-card">
+                <div class="icon-badge">01</div>
+                <h3>Easy Scheduling</h3>
+                <p>Book online in minutes with flexible evening and weekend options.</p>
+                <a href="book.appointment.php" class="learn-link">Book now &rarr;</a>
+            </div>
+            <div class="feature-card">
+                <div class="icon-badge">02</div>
+                <h3>Preventive Care</h3>
+                <p>Regular cleanings, exams, and wellness plans to keep your smile healthy.</p>
+                <a href="services.php" class="learn-link">Learn more &rarr;</a>
+            </div>
+            <div class="feature-card">
+                <div class="icon-badge">03</div>
+                <h3>Cosmetic Dentistry</h3>
+                <p>Whitening, veneers, and smile makeovers tailored to your goals.</p>
+                <a href="services.php" class="learn-link">Learn more &rarr;</a>
+            </div>
+            <div class="feature-card">
+                <div class="icon-badge">04</div>
+                <h3>Comfort-First</h3>
+                <p>Gentle care, digital tools, and a welcoming environment for all ages.</p>
+                <a href="about.php" class="learn-link">Learn more &rarr;</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Value section -->
+<section class="care-section">
+    <div class="container care-grid">
+        <div class="care-visual">
+            <div class="care-card main">
+                <span class="card-label">Wellness-first care</span>
+                <h3>Healthy smiles start with proactive treatment.</h3>
+            </div>
+            <div class="care-card small">
+                <span>Family dentistry</span>
+                <strong>From kids to adults</strong>
+            </div>
+        </div>
+
+        <div class="care-copy">
+            <span class="eyebrow dark">Complete dental care</span>
+            <h2>Everything your family needs under one roof.</h2>
+            <p>From everyday checkups to advanced smile design, our team provides attentive care in a calm clinical setting with modern technology.</p>
+
+            <ul class="value-list">
+                <li>Comprehensive exams and digital diagnostics</li>
+                <li>Preventive cleanings and gum health support</li>
+                <li>Restorative and cosmetic dental solutions</li>
+                <li>Flexible family scheduling and transparent pricing</li>
+            </ul>
+
+            <a href="book.appointment.php" class="btn-primary">Schedule a Consultation</a>
+        </div>
+    </div>
+</section>
+
+<!-- Core Services -->
+<section class="core-services">
+    <div class="container">
+        <h2>Our core services</h2>
+        <div class="grid-3">
+            <div class="service-card">
+                <h3>Preventive</h3>
+                <p>Checkups, cleanings, fluoride treatments, and sealants.</p>
+                <a href="services.php" class="learn-link">Learn More &rarr;</a>
+            </div>
+            <div class="service-card">
+                <h3>Cosmetic</h3>
+                <p>Whitening, veneers, bonding, and smile makeovers.</p>
+                <a href="services.php" class="learn-link">Learn More &rarr;</a>
+            </div>
+            <div class="service-card">
+                <h3>Implants</h3>
+                <p>Permanent tooth replacement for missing teeth.</p>
+                <a href="services.php" class="learn-link">Learn More &rarr;</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Process -->
+<section class="process-section">
+    <div class="container">
+        <div class="section-header center">
+            <span class="eyebrow dark">How it works</span>
+            <h2>A simple 3-step appointment experience.</h2>
+        </div>
+
+        <div class="process-grid">
+            <div class="process-card">
+                <span class="step-number">1</span>
+                <h3>Choose your visit</h3>
+                <p>Select a date and time that fits your schedule.</p>
+            </div>
+            <div class="process-card">
+                <span class="step-number">2</span>
+                <h3>Tell us about your needs</h3>
+                <p>Share symptoms, preferences, and treatment goals.</p>
+            </div>
+            <div class="process-card">
+                <span class="step-number">3</span>
+                <h3>Meet your dentist</h3>
+                <p>Enjoy thoughtful, personalized care in a modern clinic.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Testimonials -->
+<section class="testimonials">
+    <div class="container">
+        <div class="section-header center">
+            <span class="eyebrow dark">Patient stories</span>
+            <h2>Real experiences, healthier smiles.</h2>
+        </div>
+
+        <div class="testimonials-grid">
+            <div class="testimonial">
+                <p>“The staff made me feel completely at ease, and the clinic feels incredibly modern and clean.”</p>
+                <div class="person">
+                    <strong>Maria R.</strong>
+                    <span>Smile makeover patient</span>
+                </div>
+            </div>
+            <div class="testimonial">
+                <p>“Booking was easy, and the care was gentle, efficient, and genuinely personalized.”</p>
+                <div class="person">
+                    <strong>Daniel T.</strong>
+                    <span>Family checkup patient</span>
+                </div>
+            </div>
+            <div class="testimonial">
+                <p>“The team explained every step clearly, and my treatment plan felt simple and reassuring.”</p>
+                <div class="person">
+                    <strong>Amelia K.</strong>
+                    <span>Dental implant patient</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="cta-band">
+    <div class="container cta-band-inner">
+        <div>
+            <h2>Ready for a healthier, brighter smile?</h2>
+            <p>Book your visit today and experience gentle, modern dental care.</p>
+        </div>
+        <a href="book.appointment.php" class="btn-primary">Reserve Your Visit</a>
+    </div>
+</section>
+
+<?php require 'footer.php'; ?>
